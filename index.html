@@ -3,43 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <title>Amr Abdalla | Game Developer</title>
-  <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
-  <header>
-    <h1>Amr Abdalla</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="resume.html">Resume</a>
-    </nav>
-  </header>
+  <div data-include="header.html"></div>
 
-<main>
-  <div class="wrapper">
-    <h1>Game Developer Portfolio</h1>
+  <main>
+    <div class="wrapper">
+      <h1>Game Developer Portfolio</h1>
 
-    <section class="intro">
-      <img src="images/profile.jpeg" alt="Profile picture" class="profile-pic">
-      <div class="intro-text">
-        <h2>Hello, I'm Amr</h2>
-        <p>
-          I'm a passionate game developer who loves turning ideas into interactive experiences. With a strong background in Unity and a growing portfolio of personal and collaborative projects, I aim to build games that feel as good as they look.
-        </p>
-      </div>
-      <p>
-          I'm a passionate game developer who loves turning ideas into interactive experiences. With a strong background in Unity and a growing portfolio of personal and collaborative projects, I aim to build games that feel as good as they look.
-      </p>
-    </section>
+      <section id="about" class="intro">
+        <img src="images/profile.jpeg" alt="Profile picture" class="profile-pic">
+        <div class="intro-text">
+          <h2>Hello, I'm Amr</h2>
+          <p> I'm a passionate game developer Montréal with hands-on experience in Unity and C#. I love turning ideas into interactive experiences, and I believe that games are the best way to get people together. </p>
+          <p> I have a Bachelor's Degree of Computer Engineering from The American University of Cairo, and currently pursuing a Master's Degree in Software Engineering at Concordia University. </p>
+          <p> I am open for part time work, so contact me if interested! </p>
+        </div>
+      </section>
+
+      <section id ="projects" class="projects">
+        <h2>Professional Projects</h2>
+
+        <!-- Last Epoch -->
+        <div class="project-container" onclick="openModal('lastEpoch')">
+          <div class="project-img" style="background-image: url('images/lastEpoch.png');"></div>
+          <div class="project-overlay">
+            <h3>Last Epoch</h3>
+            <p>Contributions: Gameplay bug fixes, Gamepad maintenance and Gamepad Targeting Overhaul</p>
+          </div>
+        </div>
+
+        <div id="modal-lastEpoch" class="project-modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('lastEpoch')">&times;</span>
+            <h2>Last Epoch</h2>
+            <p>Last Epoch combines time travel, exciting dungeon crawling, engrossing character customization and endless replayability to create an Action RPG for veterans and newcomers alike. Travel through the world of Eterra's past and face dark empires, wrathful gods and untouched wilds to find a way to save time itself from The Void.</p>
+            <p>Tools Used: Unity3D, Clickup, Slack</p>
+            <p>Available in: <a href="https://store.steampowered.com/app/899770/Last_Epoch/" target="_blank" rel="noopener noreferrer">Steam</a>.</p>
+            <div class="modal-gallery" data-project="lastEpoch">
+              <img src="images/last-epoch/gameplay.png" alt="Screenshot 1" onclick="openLightbox('lastEpoch', 0)">
+              <img src="images/last-epoch/gameplay2.png" alt="Screenshot 2" onclick="openLightbox('lastEpoch', 1)">
+              <img src="images/last-epoch/main-menu.png" alt="Screenshot 3" onclick="openLightbox('lastEpoch', 2)">
+              <img src="images/last-epoch/ui.png" alt="Screenshot 4" onclick="openLightbox('lastEpoch', 3)">
+              <img src="images/last-epoch/ui2.png" alt="Screenshot 5" onclick="openLightbox('lastEpoch', 4)">
+              <img src="images/last-epoch/patch-notes.png" alt="Screenshot 6" onclick="openLightbox('lastEpoch', 5)">
+            </div>
+          </div>
+        </div>
+
+        <!-- Last Loremaster -->
+        <div class="project-container" onclick="openModal('lastLoremaster')">
+          <div class="project-img" style="background-image: url('images/LastLoreMaster.png');"></div>
+          <div class="project-overlay">
+            <h3>Last Loremaster</h3>
+            <p>Contributions: Core Systems, Skills Implementation and UI Integration</p>
+          </div>
+        </div>
+
+        <div id="modal-lastLoremaster" class="project-modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('lastLoremaster')">&times;</span>
+            <h2>Last Loremaster</h2>
+            <p>Last Loremaster is a heart-racing, thrill-chasing ARPG with roguelike elements (à la Hades or Darksiders), where accessing forbidden knowledge and power is as easy as changing your grip.</p>
+            <p>Tools Used: Unity3D, Jira, Discord</p>
+            <p>Available in: <a href="https://store.steampowered.com/app/2854560/Last_Loremaster/" target="_blank" rel="noopener noreferrer">Steam</a>.</p>
+            <div class="modal-gallery" data-project="lastLoremaster">
+              <img src="images/last-loremaster/gameplay.png" alt="Screenshot 1" onclick="openLightbox('lastLoremaster', 0)">
+              <img src="images/last-loremaster/gameplay2.png" alt="Screenshot 2" onclick="openLightbox('lastLoremaster', 1)">
+              <img src="images/last-loremaster/gameplay3.png" alt="Screenshot 3" onclick="openLightbox('lastLoremaster', 2)">
+              <img src="images/last-loremaster/gameplay4.png" alt="Screenshot 4" onclick="openLightbox('lastLoremaster', 3)">
+              <img src="images/last-loremaster/ui1.png" alt="Screenshot 5" onclick="openLightbox('lastLoremaster', 4)">
+              <img src="images/last-loremaster/ui2.png" alt="Screenshot 6" onclick="openLightbox('lastLoremaster', 5)">
+              <img src="images/last-loremaster/ui3.png" alt="Screenshot 7" onclick="openLightbox('lastLoremaster', 6)">
+            </div>
+          </div>
+        </div>
+
+        <!-- Khef Teom -->
+        <div class="project-container" onclick="openModal('khefTeom')">
+          <div class="project-img" style="background-image: url('images/khef.png');"></div>
+          <div class="project-overlay">
+            <h3>Khef Teom (Guess Who's Swimming)</h3>
+            <p>Contributions: Game Design and Development </p>
+          </div>
+        </div>
+
+        <div id="modal-khefTeom" class="project-modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('khefTeom')">&times;</span>
+            <h2>Khef Teom</h2>
+            <p>A playful and narrative-driven game where players guess the identities of swimmers based on humorous traits and animations. Built as a creative exploration of expressive character design and social deduction mechanics.</p>
+            <p>Tools Used: Unity3D, Photoshop, Trello</p>
+            <div class="modal-gallery" data-project="khefTeom">
+              <img src="images/khef/mainmenu.png" alt="Screenshot 1" onclick="openLightbox('khefTeom', 0)">
+              <img src="images/khef/gameplay1.png" alt="Screenshot 2" onclick="openLightbox('khefTeom', 0)">
+              <img src="images/khef/gameplay2.png" alt="Screenshot 3" onclick="openLightbox('khefTeom', 1)">
+              <img src="images/khef/gameplay3.png" alt="Screenshot 4" onclick="openLightbox('khefTeom', 1)">
+              <img src="images/khef/gameplay4.png" alt="Screenshot 5" onclick="openLightbox('khefTeom', 1)">
+              <img src="images/khef/arcade1.png" alt="Screenshot 6" onclick="openLightbox('khefTeom', 1)">
+              <img src="images/khef/arcade2.png" alt="Screenshot 7" onclick="openLightbox('khefTeom', 1)">
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+<section id="contact" class="contacts">
+  <h2>Contact Me</h2>
+  <div class="contact-icons">
+    <a href="files/Amr-Abdalla-Resume.pdf" download title="Download Resume">
+      <img src="images/icons/resume.png" alt="Resume">
+    </a>
+    <a href="https://github.com/amr-abdalla" target="_blank" title="GitHub">
+      <img src="images/icons/github.png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/amr-abdalla-513739191/" target="_blank" title="LinkedIn">
+      <img src="images/icons/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="mailto:amrala304@gmail.com" title="Email Me">
+      <img src="images/icons/email.png" alt="Email">
+    </a>
   </div>
-</main>
+</section>
+  
+  <div data-include="footer.html"></div>
 
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-image" src="" alt="Expanded">
+    <div class="lightbox-nav">
+      <span class="nav-arrow left" onclick="prevImage()">&#10094;</span>
+      <span class="nav-arrow right" onclick="nextImage()">&#10095;</span>
+    </div>
+  </div>
 
-  <footer>
-    <p>Thanks for your interest !</p>
-  </footer>
+  <script src="js/include-html.js"></script>
 </body>
 </html>

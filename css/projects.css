@@ -1,0 +1,185 @@
+/* Projects Section */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-img {
+  width: 100%;
+  padding-top: 13.4%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  background-position: top center;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  transition: background-position 0.6s ease;
+}
+
+/* 3.  On hover, slide the background down
+       (because the image is twice as tall as the box) */
+.project-img:hover{
+  background-position:bottom center;
+}
+
+.project-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* The overlay that appears on hover */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45); /* semi-transparent black */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* ensures image hover still works */
+}
+
+/* Show overlay when hovering the whole container */
+.project-container:hover .project-overlay {
+  opacity: 1;
+}
+
+/* --------------  MOBILE -------------- */
+/* use a shorter window on very small screens */
+@media (max-width: 600px) {
+  .project-img {
+    padding-top: 20%; /* adjust this based on the new image aspect ratio on small screens */
+  }
+}
+
+.project-modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Modal Content */
+.modal-content {
+  background: #1a1a1a;
+  color: white;
+  padding: 2rem;
+  max-width: 800px;
+  width: 90%;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+/* Gallery thumbnails inside modal */
+.modal-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.modal-gallery img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Lightbox full-screen viewer */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.nav-arrow {
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  user-select: none;
+}

@@ -1,0 +1,39 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  background: #1f1f1f;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ababab;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 1rem;
+}
