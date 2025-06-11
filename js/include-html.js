@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'images/last-loremaster/gameplay2.png',
         'images/last-loremaster/gameplay3.png',
         'images/last-loremaster/gameplay4.png',
-        'images/last-epoch/ui.png',
-        'images/last-epoch/ui2.png',
-        'images/last-epoch/ui3.png'
+        'images/last-loremaster/ui1.png',
+        'images/last-loremaster/ui2.png',
+        'images/last-loremaster/ui3.png'
       ],
       khefTeom: [
         'images/khef/mainmenu.png',
