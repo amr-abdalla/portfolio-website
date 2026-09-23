@@ -1,149 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amr Abdalla | Game Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/projects.css">
+  <meta name="description" content="I'm a passionate game developer based in Montréal with hands-on experience in Unity and C#.">
+  <meta name="theme-color" content="#1f1f1f">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <div data-include="header.html"></div>
-
-  <main>
-    <div class="wrapper">
-      <h1>Game Developer Portfolio</h1>
-
-      <section id="about" class="intro">
-        <img src="images/profile.jpeg" alt="Profile picture" class="profile-pic">
-        <div class="intro-text">
-          <h2>Hello, I'm Amr</h2>
-          <p> I'm a passionate game developer based in Montréal with hands-on experience in Unity and C#. I love turning ideas into interactive experiences, and I believe that games are the best way to get people together. </p>
-          <p> I have a Bachelor's Degree of Computer Engineering from The American University of Cairo, and currently pursuing a Master's Degree in Software Engineering at Concordia University. </p>
-          <p> I am open for part time work, so contact me if interested! </p>
-        </div>
-      </section>
-
-      <section id ="projects" class="projects">
-        <h2>Professional Projects</h2>
-
-        <!-- Last Epoch -->
-        <div class="project-container" onclick="openModal('lastEpoch')">
-          <div class="project-img" style="background-image: url('images/lastEpoch.png');"></div>
-          <div class="project-overlay">
-            <h3>Last Epoch</h3>
-            <p>Contributions: Gameplay bug fixes, Gamepad maintenance and Gamepad Targeting Overhaul</p>
-          </div>
-        </div>
-
-        <div id="modal-lastEpoch" class="project-modal">
-          <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('lastEpoch')">&times;</span>
-            <h2>Last Epoch</h2>
-            <p>Last Epoch combines time travel, exciting dungeon crawling, engrossing character customization and endless replayability to create an Action RPG for veterans and newcomers alike. Travel through the world of Eterra's past and face dark empires, wrathful gods and untouched wilds to find a way to save time itself from The Void.</p>
-            <p>Tools Used: Unity3D, Clickup, Slack</p>
-            <p>Available in: <a href="https://store.steampowered.com/app/899770/Last_Epoch/" target="_blank" rel="noopener noreferrer">Steam</a></p>
-            <div class="modal-gallery" data-project="lastEpoch">
-              <img src="images/last-epoch/gameplay.png" alt="Screenshot 1" onclick="openLightbox('lastEpoch', 0)">
-              <img src="images/last-epoch/gameplay2.png" alt="Screenshot 2" onclick="openLightbox('lastEpoch', 1)">
-              <img src="images/last-epoch/main-menu.png" alt="Screenshot 3" onclick="openLightbox('lastEpoch', 2)">
-              <img src="images/last-epoch/ui.png" alt="Screenshot 4" onclick="openLightbox('lastEpoch', 3)">
-              <img src="images/last-epoch/ui2.png" alt="Screenshot 5" onclick="openLightbox('lastEpoch', 4)">
-              <img src="images/last-epoch/patch-notes.png" alt="Screenshot 6" onclick="openLightbox('lastEpoch', 5)">
-            </div>
-          </div>
-        </div>
-
-        <!-- Last Loremaster -->
-        <div class="project-container" onclick="openModal('lastLoremaster')">
-          <div class="project-img" style="background-image: url('images/LastLoreMaster.png');"></div>
-          <div class="project-overlay">
-            <h3>Last Loremaster</h3>
-            <p>Contributions: Core Systems, Skills Implementation and UI Integration</p>
-          </div>
-        </div>
-
-        <div id="modal-lastLoremaster" class="project-modal">
-          <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('lastLoremaster')">&times;</span>
-            <h2>Last Loremaster</h2>
-            <p>Last Loremaster is a heart-racing, thrill-chasing ARPG with roguelike elements (à la Hades or Darksiders), where accessing forbidden knowledge and power is as easy as changing your grip.</p>
-            <p>Tools Used: Unity3D, Jira, Discord</p>
-            <p>Available in: <a href="https://store.steampowered.com/app/2854560/Last_Loremaster/" target="_blank" rel="noopener noreferrer">Steam</a></p>
-            <div class="modal-gallery" data-project="lastLoremaster">
-              <img src="images/last-loremaster/gameplay.png" alt="Screenshot 1" onclick="openLightbox('lastLoremaster', 0)">
-              <img src="images/last-loremaster/gameplay2.png" alt="Screenshot 2" onclick="openLightbox('lastLoremaster', 1)">
-              <img src="images/last-loremaster/gameplay3.png" alt="Screenshot 3" onclick="openLightbox('lastLoremaster', 2)">
-              <img src="images/last-loremaster/gameplay4.png" alt="Screenshot 4" onclick="openLightbox('lastLoremaster', 3)">
-              <img src="images/last-loremaster/ui1.png" alt="Screenshot 5" onclick="openLightbox('lastLoremaster', 4)">
-              <img src="images/last-loremaster/ui2.png" alt="Screenshot 6" onclick="openLightbox('lastLoremaster', 5)">
-              <img src="images/last-loremaster/ui3.png" alt="Screenshot 7" onclick="openLightbox('lastLoremaster', 6)">
-            </div>
-          </div>
-        </div>
-
-        <!-- Khef Teom -->
-        <div class="project-container" onclick="openModal('khefTeom')">
-          <div class="project-img" style="background-image: url('images/khef.png');"></div>
-          <div class="project-overlay">
-            <h3>Khef Teom (Guess Who's Swimming)</h3>
-            <p>Contributions: Game Design and Development </p>
-          </div>
-        </div>
-
-        <div id="modal-khefTeom" class="project-modal">
-          <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('khefTeom')">&times;</span>
-            <h2>Khef Teom</h2>
-            <p>An Arcade game consisting of two minigames that transforms cultural heritage of water into a fun experience for children. Was made as part of a collaboration between the American University of Cairo and Megawra</p>
-            <p>Tools Used: Unity3D, Photoshop, Figma, Trello</p>
-            <div class="modal-gallery" data-project="khefTeom">
-              <img src="images/khef/mainmenu.png" alt="Screenshot 1" onclick="openLightbox('khefTeom', 0)">
-              <img src="images/khef/gameplay1.png" alt="Screenshot 2" onclick="openLightbox('khefTeom', 0)">
-              <img src="images/khef/gameplay2.png" alt="Screenshot 3" onclick="openLightbox('khefTeom', 1)">
-              <img src="images/khef/gameplay3.png" alt="Screenshot 4" onclick="openLightbox('khefTeom', 1)">
-              <img src="images/khef/gameplay4.png" alt="Screenshot 5" onclick="openLightbox('khefTeom', 1)">
-              <img src="images/khef/arcade1.png" alt="Screenshot 6" onclick="openLightbox('khefTeom', 1)">
-              <img src="images/khef/arcade2.png" alt="Screenshot 7" onclick="openLightbox('khefTeom', 1)">
-            </div>
-          </div>
-        </div>
-
-      </section>
+  <header class="site-header">
+    <div>
+      <p class="site-header__name">Amr Abdalla</p>
+      <p class="site-header__subtitle">Unity Developer</p>
     </div>
+    <nav aria-label="Main">
+      <ul class="site-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Game Developer Portfolio</h1>
+
+    <section id="about" class="intro" aria-labelledby="about-title">
+      <img class="intro__photo" src="images/profile.webp" alt="Portrait of Amr Abdalla" width="400" height="533">
+      <div class="intro__text">
+        <h2 id="about-title">Hello, I'm Amr</h2>
+        <p>I'm a passionate game developer based in Montréal with hands-on experience in Unity and C#. I love turning ideas into interactive experiences, and I believe that games are the best way to get people together.</p>
+        <p>I have a Bachelor's Degree of Computer Engineering from The American University of Cairo, and currently pursuing a Master's Degree in Software Engineering at Concordia University.</p>
+        <p>I am open for part time work, so contact me if interested!</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section__title">Professional Projects</h2>
+
+      <ul class="project-list">
+        <li>
+          <article class="project-card">
+            <div class="project-card__media">
+              <img src="images/last-epoch/banner.webp" alt="" width="1688" height="452">
+            </div>
+            <div class="project-card__caption">
+              <h3 class="project-card__title">
+                <button class="project-card__button" type="button" aria-haspopup="dialog" data-opens="dialog-last-epoch">Last Epoch</button>
+              </h3>
+              <p>Contributions: Gameplay bug fixes, Gamepad maintenance and Gamepad Targeting Overhaul</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="project-card">
+            <div class="project-card__media">
+              <img src="images/last-loremaster/banner.webp" alt="" width="1688" height="452">
+            </div>
+            <div class="project-card__caption">
+              <h3 class="project-card__title">
+                <button class="project-card__button" type="button" aria-haspopup="dialog" data-opens="dialog-last-loremaster">Last Loremaster</button>
+              </h3>
+              <p>Contributions: Core Systems, Skills Implementation and UI Integration</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="project-card">
+            <div class="project-card__media">
+              <img src="images/khef/banner.webp" alt="" width="1688" height="452">
+            </div>
+            <div class="project-card__caption">
+              <h3 class="project-card__title">
+                <button class="project-card__button" type="button" aria-haspopup="dialog" data-opens="dialog-khef-teom">Khef Teom (Guess Who's Swimming)</button>
+              </h3>
+              <p>Contributions: Game Design and Development</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+      <!-- Project details. Each dialog is opened by the card whose data-opens matches its id. -->
+      <dialog id="dialog-last-epoch" class="dialog" aria-labelledby="dialog-last-epoch-title">
+        <button class="dialog__close icon-button" type="button" aria-label="Close" data-close>&times;</button>
+        <div class="dialog__body">
+          <h2 id="dialog-last-epoch-title">Last Epoch</h2>
+          <p>Last Epoch combines time travel, exciting dungeon crawling, engrossing character customization and endless replayability to create an Action RPG for veterans and newcomers alike. Travel through the world of Eterra's past and face dark empires, wrathful gods and untouched wilds to find a way to save time itself from The Void.</p>
+          <p>Tools Used: Unity3D, Clickup, Slack</p>
+          <p>Available in: <a href="https://store.steampowered.com/app/899770/Last_Epoch/" target="_blank" rel="noopener noreferrer">Steam</a></p>
+          <ul class="gallery">
+            <li><a href="images/last-epoch/gameplay.webp"><img src="images/last-epoch/thumbs/gameplay.webp" alt="Last Epoch gameplay" width="714" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-epoch/gameplay2.webp"><img src="images/last-epoch/thumbs/gameplay2.webp" alt="Last Epoch gameplay" width="713" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-epoch/main-menu.webp"><img src="images/last-epoch/thumbs/main-menu.webp" alt="Last Epoch main menu" width="771" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-epoch/ui.webp"><img src="images/last-epoch/thumbs/ui.webp" alt="Last Epoch item and crafting interface" width="711" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-epoch/ui2.webp"><img src="images/last-epoch/thumbs/ui2.webp" alt="Last Epoch interface" width="854" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-epoch/patch-notes.webp"><img src="images/last-epoch/thumbs/patch-notes.webp" alt="Last Epoch patch notes describing gamepad targeting" width="401" height="400" loading="lazy" decoding="async"></a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <dialog id="dialog-last-loremaster" class="dialog" aria-labelledby="dialog-last-loremaster-title">
+        <button class="dialog__close icon-button" type="button" aria-label="Close" data-close>&times;</button>
+        <div class="dialog__body">
+          <h2 id="dialog-last-loremaster-title">Last Loremaster</h2>
+          <p>Last Loremaster is a heart-racing, thrill-chasing ARPG with roguelike elements (à la Hades or Darksiders), where accessing forbidden knowledge and power is as easy as changing your grip.</p>
+          <p>Tools Used: Unity3D, Jira, Discord</p>
+          <p>Available in: <a href="https://store.steampowered.com/app/2854560/Last_Loremaster/" target="_blank" rel="noopener noreferrer">Steam</a></p>
+          <ul class="gallery">
+            <li><a href="images/last-loremaster/gameplay.webp"><img src="images/last-loremaster/thumbs/gameplay.webp" alt="Last Loremaster combat" width="683" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-loremaster/gameplay2.webp"><img src="images/last-loremaster/thumbs/gameplay2.webp" alt="Last Loremaster combat" width="685" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-loremaster/gameplay3.webp"><img src="images/last-loremaster/thumbs/gameplay3.webp" alt="Last Loremaster combat" width="704" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-loremaster/gameplay4.webp"><img src="images/last-loremaster/thumbs/gameplay4.webp" alt="Last Loremaster character dialogue" width="683" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-loremaster/ui1.webp"><img src="images/last-loremaster/thumbs/ui1.webp" alt="Last Loremaster skill tree" width="690" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-loremaster/ui2.webp"><img src="images/last-loremaster/thumbs/ui2.webp" alt="Last Loremaster skill tree" width="687" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/last-loremaster/ui3.webp"><img src="images/last-loremaster/thumbs/ui3.webp" alt="Last Loremaster part selection screen" width="690" height="400" loading="lazy" decoding="async"></a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <dialog id="dialog-khef-teom" class="dialog" aria-labelledby="dialog-khef-teom-title">
+        <button class="dialog__close icon-button" type="button" aria-label="Close" data-close>&times;</button>
+        <div class="dialog__body">
+          <h2 id="dialog-khef-teom-title">Khef Teom</h2>
+          <p>An Arcade game consisting of two minigames that transforms cultural heritage of water into a fun experience for children. Was made as part of a collaboration between the American University of Cairo and Megawra</p>
+          <p>Tools Used: Unity3D, Photoshop, Figma, Trello</p>
+          <ul class="gallery">
+            <li><a href="images/khef/mainmenu.webp"><img src="images/khef/thumbs/mainmenu.webp" alt="Khef Teom main menu" width="717" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/khef/gameplay1.webp"><img src="images/khef/thumbs/gameplay1.webp" alt="Khef Teom gameplay" width="710" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/khef/gameplay2.webp"><img src="images/khef/thumbs/gameplay2.webp" alt="Khef Teom gameplay" width="711" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/khef/gameplay3.webp"><img src="images/khef/thumbs/gameplay3.webp" alt="Khef Teom gameplay" width="716" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/khef/gameplay4.webp"><img src="images/khef/thumbs/gameplay4.webp" alt="Khef Teom gameplay" width="716" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/khef/arcade1.webp"><img src="images/khef/thumbs/arcade1.webp" alt="Children playing Khef Teom on the arcade cabinet" width="600" height="400" loading="lazy" decoding="async"></a></li>
+            <li><a href="images/khef/arcade2.webp"><img src="images/khef/thumbs/arcade2.webp" alt="Khef Teom running on the arcade cabinet" width="400" height="711" loading="lazy" decoding="async"></a></li>
+          </ul>
+        </div>
+      </dialog>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section__title">Contact Me</h2>
+      <ul class="contact__links">
+        <li><a href="files/Amr-Abdalla-Resume.pdf" download title="Download Resume"><img src="images/icons/resume.png" alt="Resume" width="50" height="50"></a></li>
+        <li><a href="https://github.com/amr-abdalla" target="_blank" rel="noopener noreferrer" title="GitHub"><img src="images/icons/github.png" alt="GitHub" width="50" height="50"></a></li>
+        <li><a href="https://www.linkedin.com/in/amr-abdalla-513739191/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><img src="images/icons/linkedin.png" alt="LinkedIn" width="50" height="50"></a></li>
+        <li><a href="mailto:amrala304@gmail.com" title="Email Me"><img src="images/icons/email.png" alt="Email" width="50" height="50"></a></li>
+      </ul>
+    </section>
   </main>
 
-<section id="contact" class="contacts">
-  <h2>Contact Me</h2>
-  <div class="contact-icons">
-    <a href="files/Amr-Abdalla-Resume.pdf" download title="Download Resume">
-      <img src="images/icons/resume.png" alt="Resume">
-    </a>
-    <a href="https://github.com/amr-abdalla" target="_blank" title="GitHub">
-      <img src="images/icons/github.png" alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/amr-abdalla-513739191/" target="_blank" title="LinkedIn">
-      <img src="images/icons/linkedin.png" alt="LinkedIn">
-    </a>
-    <a href="mailto:amrala304@gmail.com" title="Email Me">
-      <img src="images/icons/email.png" alt="Email">
-    </a>
-  </div>
-</section>
-  
-  <div data-include="footer.html"></div>
+  <footer class="site-footer">
+    <p>Thanks for your interest !</p>
+    <p>&copy; 2025 Amr Abdalla</p>
+  </footer>
 
-  <div id="lightbox" class="lightbox">
-    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-image" src="" alt="Expanded">
-    <div class="lightbox-nav">
-      <span class="nav-arrow left" onclick="prevImage()">&#10094;</span>
-      <span class="nav-arrow right" onclick="nextImage()">&#10095;</span>
-    </div>
-  </div>
-
-  <script src="js/include-html.js"></script>
+  <!-- Full-screen image viewer shared by all project galleries. -->
+  <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
+    <button class="lightbox__close icon-button" type="button" aria-label="Close" data-close>&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev icon-button" type="button" aria-label="Previous image" data-step="-1">&#10094;</button>
+    <img class="lightbox__image" src="data:," alt="">
+    <button class="lightbox__nav lightbox__nav--next icon-button" type="button" aria-label="Next image" data-step="1">&#10095;</button>
+  </dialog>
 </body>
 </html>
